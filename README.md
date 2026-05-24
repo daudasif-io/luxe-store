@@ -9,8 +9,8 @@ A complete, production-ready e-commerce web application built from scratch by a 
 ---
 
 ## 👨‍💻 Built By
-**Daud** | Full Stack Developer  
-Certification: PNY Trainings
+**Daud Asif** | Full Stack Developer  
+Certified By PNY Trainings
 
 ---
 
