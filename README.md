@@ -1,6 +1,6 @@
 # 🛍️ Luxe Store — Full Stack E-Commerce Application
 
-A complete, production-ready e-commerce web application built from scratch by a beginner developer.
+A complete, production-ready e-commerce web application built from scratch by a developer.
 
 ![Tech Stack](https://img.shields.io/badge/Frontend-React-blue)
 ![Tech Stack](https://img.shields.io/badge/Backend-Flask-green)
