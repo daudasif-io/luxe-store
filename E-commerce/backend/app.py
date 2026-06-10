@@ -26,6 +26,17 @@ app.register_blueprint(orders_bp,    url_prefix='/api/orders')
 app.register_blueprint(admin_bp,     url_prefix='/api/admin')
 app.register_blueprint(reviews_bp,   url_prefix='/api/reviews')
 
+app.config['MYSQL_HOST'] = os.environ.get('MYSQL_HOST', 'localhost')
+app.config['MYSQL_USER'] = os.environ.get('MYSQL_USER', 'root')
+app.config['MYSQL_PASSWORD'] = os.environ.get('MYSQL_PASSWORD', '')
+app.config['MYSQL_DB'] = os.environ.get('MYSQL_DB', 'luxe_store')
+
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'your-local-dev-key')
+
+if __name__ == '__main__':
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
+
 @app.route('/uploads/<filename>')
 def uploaded_file(filename):
     return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
