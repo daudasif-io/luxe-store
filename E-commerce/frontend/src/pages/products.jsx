@@ -1,7 +1,7 @@
 import { useEffect, useState, useMemo } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
-import { useCart } from '../context/CartContext'
+import { useCart } from '../context/cartcontext'
 import '../index.css'
 
 const PER_PAGE = 12

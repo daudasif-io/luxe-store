@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
-import { useCart } from '../context/CartContext'
+import { useCart } from '../context/cartcontext'
 import '../index.css'
 
 function Home() {
