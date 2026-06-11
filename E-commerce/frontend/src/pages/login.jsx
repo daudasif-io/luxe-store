@@ -196,7 +196,7 @@ function Login() {
     setLoading(true)
     setError('')
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/login', form)
+      const res = await axios.post('\{API_BASE}`/api/auth/login', form)
       localStorage.setItem('token', res.data.token)
       localStorage.setItem('user', JSON.stringify(res.data.user))
       navigate('/')

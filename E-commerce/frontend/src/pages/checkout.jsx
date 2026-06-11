@@ -54,7 +54,7 @@ function Checkout() {
     try {
       const items = cart.map(i => ({ id: i.id, quantity: i.quantity }))
       const res   = await axios.post(
-        'http://localhost:5000/api/orders/',
+        '\${API_BASE}`/api/orders/',
         { items },
         { headers: { Authorization: `Bearer ${token}` } }
       )
@@ -288,7 +288,7 @@ function Checkout() {
                 <div key={item.id} style={{ display: 'flex', gap: '0.75rem', marginBottom: '1rem', alignItems: 'center' }}>
                   <div style={{ width: '48px', height: '48px', background: 'var(--bg3)', borderRadius: '8px', overflow: 'hidden', flexShrink: 0 }}>
                     {item.image_url
-                      ? <img src={item.image_url.startsWith('http') ? item.image_url : `http://localhost:5000${item.image_url}`} alt={item.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                      ? <img src={item.image_url.startsWith('http') ? item.image_url : `${API_BASE}$${item.image_url}`} alt={item.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                       : <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.2rem', opacity: 0.4 }}>◈</div>
                     }
                   </div>

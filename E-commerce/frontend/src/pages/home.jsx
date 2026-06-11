@@ -11,7 +11,7 @@ function Home() {
   const user = JSON.parse(localStorage.getItem('user') || 'null')
 
   useEffect(() => {
-    axios.get('http://localhost:5000/').then(r => setStatus(r.data.message)).catch(() => {})
+    axios.get('\${API_BASE}`/').then(r => setStatus(r.data.message)).catch(() => {})
     const onScroll = () => setScrolled(window.scrollY > 40)
     window.addEventListener('scroll', onScroll)
     return () => window.removeEventListener('scroll', onScroll)

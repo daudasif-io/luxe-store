@@ -19,7 +19,7 @@ function Products() {
   const user = JSON.parse(localStorage.getItem('user') || 'null')
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/products/')
+    axios.get('\${API_BASE}`/api/products/')
       .then(res => setProducts(res.data))
       .finally(() => setLoading(false))
     const onScroll = () => setScrolled(window.scrollY > 40)
@@ -153,7 +153,7 @@ function Products() {
                   {/* IMAGE */}
                   <div style={{ position: 'relative', height: '220px', background: 'var(--bg3)', overflow: 'hidden' }}>
                     {p.image_url
-                      ? <img src={p.image_url.startsWith('http') ? p.image_url : `http://localhost:5000${p.image_url}`} alt={p.name}
+                      ? <img src={p.image_url.startsWith('http') ? p.image_url : `${API_BASE}${p.image_url}`} alt={p.name}
                           style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.4s' }}
                           onMouseEnter={e => e.target.style.transform = 'scale(1.05)'}
                           onMouseLeave={e => e.target.style.transform = 'none'} />

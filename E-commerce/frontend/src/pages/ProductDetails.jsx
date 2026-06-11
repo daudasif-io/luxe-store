@@ -4,7 +4,8 @@ import { useParams, Link, useNavigate } from 'react-router-dom'
 import { useCart } from '../context/CartContext'
 import '../index.css'
 
-const API = 'http://localhost:5000'  
+import API_BASE from '../api';
+const API = API_BASE 
 
 function Stars({ rating, size = 16, interactive = false, onRate }) {
   const [hovered, setHovered] = useState(0)

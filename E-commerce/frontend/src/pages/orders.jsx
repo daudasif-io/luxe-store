@@ -10,7 +10,7 @@ function Orders() {
 
   useEffect(() => {
     if (!token) { navigate('/login'); return }
-    axios.get('http://localhost:5000/api/orders/my', {
+    axios.get('\${API_BASE}`/api/orders/my', {
       headers: { Authorization: `Bearer ${token}` }
     })
     .then(res => setOrders(res.data))

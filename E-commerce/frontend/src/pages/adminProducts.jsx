@@ -3,7 +3,8 @@ import axios from 'axios'
 import { Link, useNavigate } from 'react-router-dom'
 import '../index.css'
 
-const API = 'http://localhost:5000/api/products'
+import API_BASE from '../api';
+const API = API_BASE
 const emptyForm = { name: '', description: '', price: '', stock: '', image_url: '' }
 
 function AdminProducts() {
@@ -75,7 +76,7 @@ function AdminProducts() {
     setEditId(p.id)
     setForm({ name: p.name, description: p.description || '', price: p.price, stock: p.stock, image_url: '' })
     setImageFile(null)
-    setPreview(p.image_url ? (p.image_url.startsWith('http') ? p.image_url : `http://localhost:5000${p.image_url}`) : null)
+    setPreview(p.image_url ? (p.image_url.startsWith('http') ? p.image_url : `${API_BASE}${p.image_url}`) : null)
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 

@@ -3,7 +3,8 @@ import axios from 'axios'
 import { Link, useNavigate } from 'react-router-dom'
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from 'recharts'
 
-const API     = 'http://localhost:5000/api/admin'
+import API_BASE from '../api';
+const API = API_BASE
 const statusColors = {
   pending:    '#f59e0b',
   processing: '#3b82f6',
